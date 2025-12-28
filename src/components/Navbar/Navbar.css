@@ -1,0 +1,170 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #1e1e1e;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo a{
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+.search{
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+   padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Navbar Links */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ff6b6b;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-actions .btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.signup-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+}
+
+/* Hide on mobile by default */
+.desktop-only {
+  display: flex;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: absolute; /* Make it float on top of hero image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(30, 30, 30, 0.3); /* semi-transparent */
+  backdrop-filter: blur(5px); /* optional blur effect for readability */
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+/* Optional: solid background when scrolling */
+.navbar.scrolled {
+  background: rgba(30, 30, 30, 0.9);
+}
+
+
+
+@media (max-width: 870px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 8px;
+    display: none; /* hidden by default */
+  }
+
+  .navbar-menu.open {
+    display: flex; /* show only when menuOpen is true */
+    width: 50px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-actions .btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
