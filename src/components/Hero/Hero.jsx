@@ -29,7 +29,7 @@ function Hero() {
                 Discover top deals and premium quality products at the best
                 prices.
               </p>
-              <button className="btn">Shop Now</button>
+              <button className="btn-home">Shop Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -40,7 +40,7 @@ function Hero() {
             <div className="slide-text">
               <h1>Unbeatable Offers</h1>
               <p>Trendy outfits & smart gadgets at the lowest prices.</p>
-              <button className="btn">Explore Now</button>
+              <button className="btn-home">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -51,7 +51,7 @@ function Hero() {
             <div className="slide-text">
               <h1>Premium Quality</h1>
               <p>Handpicked products for everyday comfort.</p>
-              <button className="btn">Buy Now</button>
+              <button className="btn-home">Buy Now</button>
             </div>
           </div>
         </SwiperSlide>

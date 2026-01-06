@@ -1,0 +1,133 @@
+.product-details-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 80vh;
+  background-color: #f8f8f8;
+  margin-top: 50px;
+}
+
+.product-details-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.details-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.details-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.details-category,
+.details-price,
+.details-rating,
+.details-description {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.details-description {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.add-to-cart-btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: #ff4d4f;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .product-details-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .details-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .details-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-name {
+    font-size: 1.8rem;
+  }
+
+  .details-category,
+  .details-price,
+  .details-rating,
+  .details-description {
+    font-size: 1rem;
+  }
+
+  .add-to-cart-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-details-container {
+    padding: 1rem;
+  }
+
+  .details-name {
+    font-size: 1.5rem;
+  }
+
+  .details-description {
+    font-size: 0.95rem;
+  }
+
+  .add-to-cart-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+}

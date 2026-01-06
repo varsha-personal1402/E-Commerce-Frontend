@@ -1,23 +1,59 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../ConetxAPI/CartContext";
+import "./Cart.css";
 
-const Cart = () => {
+function Cart() {
+  const navigate = useNavigate();
+  const { cartItems, removeFromCart } = useContext(CartContext);
+
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+
   return (
-    <div>
-      <div className="page-container">
-        <h2 className="page-title">Your Cart</h2>
-        <div className="cart-item">
-          <img src="https://via.placeholder.com/120" alt="cart-img" />
-          <div>
-            <h3>Product 1</h3>
-            <p>Price: ₹999</p>
+    <div className="cart-page">
+      <h2>My Shopping Cart</h2>
+
+      {cartItems.length === 0 ? (
+        <p className="empty-cart">Your Cart is Empty</p>
+      ) : (
+        <>
+          <div className="cart-items">
+            {cartItems.map((item) => (
+              <div key={item.id} className="cart-item">
+                <img src={item.image} alt={item.name} />
+                <div className="item-info">
+                  <h3>{item.name}</h3>
+                  <p>{item.category}</p>
+                  <p className="price">
+                    ₹{item.price} × {item.quantity}
+                  </p>
+                </div>
+                <button
+                  className="btn remove-btn"
+                  onClick={() => removeFromCart(item.id)}
+                >
+                  Remove
+                </button>
+              </div>
+            ))}
           </div>
-          <button className="remove-btn">Remove</button>
-        </div>
-        <h3 className="total">Total: ₹999</h3>
-        <button className="btn">Proceed to Checkout</button>
-      </div>
+
+          <div className="cart-summary">
+            <h3>Total: ₹{totalPrice}</h3>
+            <button
+              className="btn checkout-btn"
+              onClick={() => navigate("/checkout")}
+            >
+              Checkout
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
-};
+}
 
 export default Cart;
