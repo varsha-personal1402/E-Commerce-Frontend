@@ -10,7 +10,7 @@ import ProductList from './pages/Products/ProductList.jsx'
 import ProductDetails from './pages/Products/ProductDetails.jsx'
 import ContactForm from './pages/Contact/ContactForm.jsx'
 import UserDashboard from './pages/UserDashboard/UserDashboard.jsx'
-import Checkout from './pages/CheckoutPage/Checkout.JSX'
+import Checkout from './pages/CheckoutPage/Checkout.jsx'
 import { CartProvider } from './ConetxAPI/CartContext.jsx'
 import { OrdersProvider } from './ConetxAPI/OrderContext.jsx'
 
