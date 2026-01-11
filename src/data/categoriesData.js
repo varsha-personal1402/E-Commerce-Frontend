@@ -4,7 +4,7 @@ import grocery from "../assets/categories/grocery.jpg";
 import toys from "../assets/categories/toys.jpg";
 import tshirt from "../assets/categories/T-shirt.jpg";
 import shirt from "../assets/categories/shirt.jpg";
-import bag from "../assets/categories/bag.jpg";
+import bag from "../assets/categories/Bag.jpg";
 import shoes from "../assets/categories/shoes.jpg";
 import watches from "../assets/categories/Watch.jpg";
 import jeans from "../assets/categories/jeans.jpg";
